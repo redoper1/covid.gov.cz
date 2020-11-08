@@ -92,22 +92,7 @@ const config = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
-    {
-      resolve: `gatsby-plugin-csp`,
-      options: {
-        mergeStyleHashes: false,
-        directives: {
-          'script-src': "'self' www.googletagmanager.com",
-          'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
-          'prefetch-src':
-            "'self' fonts.googleapis.com www.googletagmanager.com",
-          'font-src': "'self' fonts.googleapis.com fonts.gstatic.com",
-          'img-src': "'self' data:",
-          'connect-src': "'self' analytics.google.com",
-          'default-src': "'self' www.googletagmanager.com fonts.googleapis.com",
-        },
-      },
-    },
+
     {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
@@ -154,42 +139,7 @@ const config = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: `Covid Portál - Vládní opatření`,
-        short_name: 'Covid Portál',
-        theme_color: '#2362a2',
-        background_color: '#2362a2',
-        lang: `cs`,
-        start_url: `/`,
-        display: 'standalone',
-        icon: 'static/ds/images/meta/maskable_icon.png',
-        icon_options: {
-          purpose: 'any maskable',
-        },
-        icons: [
-          {
-            src: `static/ds/images/meta/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `static/ds/images/meta/android-chrome-256x256.png`,
-            sizes: `256x256`,
-            type: `image/png`,
-          },
-        ],
-        localize: [
-          {
-            start_url: `/en/`,
-            lang: `en`,
-            name: `Covid Portal - Government measures`,
-            short_name: `Covid Portal`,
-          },
-        ],
-      },
-    },
+
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
@@ -197,7 +147,6 @@ const config = {
         display: 'block',
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
