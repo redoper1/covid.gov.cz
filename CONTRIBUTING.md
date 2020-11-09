@@ -32,6 +32,22 @@ All pull requests should undergo code review. The code review can be performed b
 
 A Pull Request has to pass validation by Github Actions (Triggered Automatically)
 
+## Branching Workflow
+
+Basic rules:
+
+* All work starts in a feature branch.
+* Feature branches are merged into the `next` integration branch.
+* Once `next` is stabilized and tested, it’s merged into `master`.
+* All production deployments are done from `master`.
+
+Tips:
+
+* If you desperately need an urgent fix in production, create a hotfix branch on `master` (and then backport the fix into `next`).
+* Never commit directly to `master`.
+* Never merge `next` to feature branches.
+* Never merge one feature branch into another.
+
 ## Gatsby
 
 ### Code Style
